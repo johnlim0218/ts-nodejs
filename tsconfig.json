@@ -1,7 +1,12 @@
 {
     "compilerOptions" : {
-        "strict" : true,
-        "lib" : [
+        "module": "CommonJS",
+        "strict": true,
+        "target": "es2020",
+        "lib": [
+            "ES5",
+            "ES6",
+            "ES7",
             "es2015",
             "es2016",
             "es2017",
@@ -10,6 +15,7 @@
             "es2020",
         ],
         "moduleResolution": "node",
-        "typeRoots": ["./types"]
-    }
+        "typeRoots": ["node_modules/@types", "./types"]
+    },
+   
 }

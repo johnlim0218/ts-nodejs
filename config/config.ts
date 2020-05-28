@@ -9,6 +9,7 @@ type Config = {
   password: string,
   database: string,
   host: string,
+  dialect: 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql',
   [key: string]: string,
 }
 

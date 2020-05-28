@@ -1,8 +1,10 @@
-import User, { associate as userAssociate } from './User/User';
+import User, { associate as associateUser } from './user/user';
 export * from './sequelize';
 
-const db = {
+export const db = {
   User,
 }
 
 export type dbType = typeof db;
+
+associateUser(db);

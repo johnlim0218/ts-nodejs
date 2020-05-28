@@ -3,7 +3,7 @@ import { sequelize } from '../sequelize';
 import { dbType } from '../index';
 
 class User extends Model {
-    public id!: number;
+    public readonly id!: number;
     public nickname!: string;
     public userId!: string;
     public password!: string;
@@ -28,6 +28,7 @@ User.init({
     sequelize,
     modelName: 'User',
     tableName: 'user',
+    paranoid: true,
     charset: 'utf8',
     collate: 'utf8_general_ci',
 });
